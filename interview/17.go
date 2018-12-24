@@ -3,7 +3,7 @@ package main
 
 import (
 	"fmt"
-    "reflect"
+	"reflect"
 )
 
 func main() {
@@ -34,11 +34,11 @@ func main() {
 	if sm1 == sm2 {
 		fmt.Println("sm1 == sm2")
 	}
-//    if reflect.DeepEqual(sm1, sm2) {
-//        fmt.Println("sm1 == sm2")
-//    } else {
-//        fmt.Println("sm1 == sm2")
-//    }
+	//    if reflect.DeepEqual(sm1, sm2) {
+	//        fmt.Println("sm1 == sm2")
+	//    } else {
+	//        fmt.Println("sm1 == sm2")
+	//    }
 }
 
 //结构体属性中有不可以比较的类型，如map,slice。不能比较

@@ -2,9 +2,9 @@
 package main
 
 import (
-    "fmt"
+	"fmt"
 	"sync"
-    "time"
+	"time"
 )
 
 type UserAges struct {
@@ -32,15 +32,15 @@ func main() {
 
 	go func() {
 		for i := 0; i < 1000; i++ {
-            a.Add("TEST", 12)
+			a.Add("TEST", 12)
 		}
 	}()
 
-    go func() {
+	go func() {
 		for i := 0; i < 1000; i++ {
-            fmt.Println(a.Get("TEST"))
+			fmt.Println(a.Get("TEST"))
 		}
-    }()
+	}()
 
-    time.Sleep(time.Hour)
+	time.Sleep(time.Hour)
 }

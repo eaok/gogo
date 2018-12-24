@@ -2,26 +2,26 @@
 package main
 
 import (
-    "fmt"
+	"fmt"
 )
 
-func main()  {
-    defer_call()
+func main() {
+	defer_call()
 }
 
-func defer_call()  {
-    defer func() {
-        fmt.Println("打印前")
-    }()
+func defer_call() {
+	defer func() {
+		fmt.Println("打印前")
+	}()
 
-    defer func() {
-//        if err := recover(); err != nil {
-//            fmt.Println(err) //err就是panic
-//        }
-        fmt.Println("打印中")
-    }()
+	defer func() {
+		//        if err := recover(); err != nil {
+		//            fmt.Println(err) //err就是panic
+		//        }
+		fmt.Println("打印中")
+	}()
 
-    defer func() {
+	defer func() {
 		fmt.Println("打印后")
 	}()
 

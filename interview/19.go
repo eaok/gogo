@@ -11,16 +11,16 @@ func GetValue(m map[int]string, id int) (string, bool) {
 	}
 
 	return nil, false
-//	return "", false
+	//	return "", false
 }
 
-func main()  {
-	intmap:=map[int]string{
-		1:"a",
-		2:"bb",
-		3:"ccc",
+func main() {
+	intmap := map[int]string{
+		1: "a",
+		2: "bb",
+		3: "ccc",
 	}
 
-	v,err:=GetValue(intmap,3)
-	fmt.Println(v,err)
+	v, err := GetValue(intmap, 3)
+	fmt.Println(v, err)
 }

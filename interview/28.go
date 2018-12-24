@@ -2,23 +2,23 @@
 package main
 
 func test() []func() {
-    var funs []func()
-    for i := 0; i < 2; i++ {
-//		x := i
-        funs = append(funs, func() {
-//            println(&x, x)
-            println(&i, i)
-        })
-    }
+	var funs []func()
+	for i := 0; i < 2; i++ {
+		//		x := i
+		funs = append(funs, func() {
+			//            println(&x, x)
+			println(&i, i)
+		})
+	}
 
-    return funs
+	return funs
 }
 
 func main() {
-    funs := test()
-    for _, f := range funs{
-        f()
-    }
+	funs := test()
+	for _, f := range funs {
+		f()
+	}
 }
 
 //闭包延迟求值

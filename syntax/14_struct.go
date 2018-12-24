@@ -6,10 +6,10 @@ import (
 
 func main() {
 	type info struct {
-		id int
-		name struct{
+		id   int
+		name struct {
 			firstName string
-			lastName string
+			lastName  string
 		}
 	}
 

@@ -1,9 +1,9 @@
 //编译执行下面代码会出现什么?
 package main
 
-func main()  {
+func main() {
 
-	for i:=0; i<10; i++  {
+	for i := 0; i < 10; i++ {
 	loop:
 		println(i)
 	}
