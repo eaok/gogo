@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Student List</title>
+    </head>
+    <body>
+        <table style="width:100%">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        {{range .student_list}}
+        <tr>
+            <th>{{.Firstname}}</th>
+            <th>{{.Lastname}}</th>
+            <th>{{.Age}}</th>
+        </tr>
+        {{end}}
+        </table>
+    </body>
+</html>

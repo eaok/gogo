@@ -20,4 +20,5 @@ func main() {
 	s := NewSlice()
 	defer s.Add(1).Add(2)
 	s.Add(3)
+	fmt.Println(s)
 }
