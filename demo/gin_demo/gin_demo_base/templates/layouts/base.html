@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div style="height: 50px;background-color: red;margin-bottom: 50px">这是base.html的头部。。。</div>
+
+<hr>
+{{ block "pageinfo" . }}
+{{end}}
+<hr>
+<p>这里是base.html的底部。。。</p>
+</body>
+</html>

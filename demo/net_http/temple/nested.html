@@ -1,0 +1,16 @@
+{{ define "layout" }}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>嵌套模板</title>
+</head>
+<body>
+    {{ template "content" }}
+    {{ template "content" . }}
+</body>
+</html>
+{{ end }}
+
+{{ define "content" }}
+    <h1 style="color: blue">Hello {{ . }}!</h1>
+{{ end }}

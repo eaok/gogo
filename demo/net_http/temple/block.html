@@ -1,0 +1,14 @@
+{{ define "layout" }}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>块动作</title>
+</head>
+<body>
+    This is body.
+    {{ block "content" . }}
+        <h1 style="color: blue">Hello {{ . }}!</h1>
+    {{ end }}
+</body>
+</html>
+{{ end }}
