@@ -1,0 +1,19 @@
+version: '3'
+services:
+  api:
+    build: .
+    image: api:latest
+    container_name: "api"
+    depends_on:
+      - mysql
+    ports:
+      - 8080:8080
+
+  mysql:
+    image: mysql:latest
+    container_name: "mysql"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test
+#      ports:
+#        - 3306:3306

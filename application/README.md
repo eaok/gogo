@@ -11,4 +11,4 @@
 05_goroutinePoll.go
 
 如果无休止的开辟Goroutine依然会出现高频率的调度Goroutine，那么依然会浪费很多上下文切换的资源，导致做无用功。所以设计一个Goroutine池限制Goroutine的开辟个数在大型并发场景还是必要的。
-![](http://blog.maser.top/gogo/goroutinePool.jpg)
+![](https://cdn.jsdelivr.net/gh/eaok/img/github/gogo/goroutinePool.jpg)

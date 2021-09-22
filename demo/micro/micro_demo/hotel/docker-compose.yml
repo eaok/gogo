@@ -1,0 +1,47 @@
+consul:
+  command: -server -bootstrap -rejoin 
+  image: progrium/consul:latest
+  ports:
+    - "8300:8300"
+    - "8400:8400"
+    - "8500:8500"
+    - "8600:53/udp"
+micro:
+  command: --registry_address=consul:8500 api 
+  image: microhq/micro1:latest #这是自己编译的micro v2版本
+  links:
+    - consul
+    - api
+  ports:
+    - "8080:8080"
+  volumes:
+    - "/root:/data:rw"
+api:
+  build: ./api/hotel
+  command: --registry_address=consul:8500
+  links:
+    - consul
+    - auth
+    - geo
+    - profile
+    - rate
+auth:
+  build: ./srv/auth
+  command: --registry_address=consul:8500
+  links:
+    - consul
+geo:
+  build: ./srv/geo
+  command: --registry_address=consul:8500
+  links:
+    - consul
+profile:
+  build: ./srv/profile
+  command: --registry_address=consul:8500
+  links:
+    - consul
+rate:
+  build: ./srv/rate
+  command: --registry_address=consul:8500
+  links:
+    - consul

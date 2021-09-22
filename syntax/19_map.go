@@ -110,6 +110,8 @@ func mapStruct() {
 	m6["no1"] = stu1
 	m6["no2"] = stu2
 
+	//m6 := map[string]Stu{"no1": Stu{"tom", 18, "北京"}}
+
 	for k, v := range m6 {
 		fmt.Printf("学生号%v,name:%v,age:%v,address:%v\n", k, v.Name, v.Age, v.Address)
 	}

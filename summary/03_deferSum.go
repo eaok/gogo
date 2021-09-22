@@ -1,7 +1,6 @@
 package main
 
 import (
-	"errors"
 	"fmt"
 )
 
@@ -120,9 +119,8 @@ func deferCall() {
 }
 
 func main() {
-	errors.New()
-	nameRetVar()
-	nameRetNone()
-	anonymityRet()
+	//nameRetVar()
+	//nameRetNone()
+	//anonymityRet()
 	deferCall()
 }
