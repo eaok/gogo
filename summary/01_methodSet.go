@@ -73,8 +73,8 @@ func interfaceCall() {
 	p2.point()
 }
 
-func main() {
-	//typeLiteralCall()
-	//typeVariableCall()
-	interfaceCall()
-}
+// func main() {
+// 	typeLiteralCall()
+// 	typeVariableCall()
+// 	interfaceCall()
+// }

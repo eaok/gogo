@@ -118,9 +118,9 @@ func deferCall() {
 	b = 1
 }
 
-func main() {
-	//nameRetVar()
-	//nameRetNone()
-	//anonymityRet()
-	deferCall()
-}
+// func main() {
+// 	nameRetVar()
+// 	nameRetNone()
+// 	anonymityRet()
+// 	deferCall()
+// }

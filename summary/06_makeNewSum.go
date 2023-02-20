@@ -21,7 +21,7 @@ func newExample() {
 	fmt.Println(*i)
 }
 
-func main() {
-	makeExample()
-	newExample()
-}
+// func main() {
+// 	makeExample()
+// 	newExample()
+// }

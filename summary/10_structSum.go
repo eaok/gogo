@@ -1,11 +1,11 @@
-package structSum
+package main
 
 import (
 	"fmt"
 	"unsafe"
 )
 
-//structlayout -json . ST|structlayout-svg -t "align-guarantee" > ag.svg
+//structlayout -json . ST|structlayout-svg -t "align-guarantee" > 10_ag.svg
 type ST struct {
 	b   bool
 	num int
@@ -50,6 +50,6 @@ func zeroSizeField() {
 		unsafe.Sizeof(a2)) // 64位：16；32位：12
 }
 
-func main() {
-	zeroSizeField()
-}
+// func main() {
+// 	zeroSizeField()
+// }

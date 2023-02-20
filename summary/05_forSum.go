@@ -110,7 +110,7 @@ func rangeLoop() {
 	forChan()
 }
 
-func main() {
-	//classicLoop()
-	rangeLoop()
-}
+// func main() {
+// 	classicLoop()
+// 	rangeLoop()
+// }

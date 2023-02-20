@@ -227,13 +227,13 @@ func routineReturnErr() {
 	wg.Add(len(tasks))
 
 	for i := range tasks {
-		go func() {
+		go func(i int) {
 			defer wg.Done()
 
 			if err := tasks[i](); err != nil {
 				errCh <- err
 			}
-		}()
+		}(i)
 	}
 	wg.Wait()
 
@@ -245,13 +245,13 @@ func routineReturnErr() {
 	}
 }
 
-func main() {
-	caseSend()
-	//caseRecv()
-	//baseSelect()
+// func main() {
+// 	caseSend()
+// 	caseRecv()
+// 	baseSelect()
 
-	//timeoutSelect()
-	//checkChanFullSelect()
-	//loopSelect()
-	//routineReturnErr()
-}
+// 	timeoutSelect()
+// 	checkChanFullSelect()
+// 	loopSelect()
+// 	routineReturnErr()
+// }

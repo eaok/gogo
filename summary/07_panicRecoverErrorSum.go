@@ -73,10 +73,10 @@ func errorNewCustom() {
 	}
 }
 
-func main() {
-	//panicExample()
-	//panicOnlyCurrent()
-	//panicNested()
-	//errorNew()
-	errorNewCustom()
-}
+// func main() {
+// 	panicExample()
+// 	panicOnlyCurrent()
+// 	panicNested()
+// 	errorNew()
+// 	errorNewCustom()
+// }

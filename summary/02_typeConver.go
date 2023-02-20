@@ -67,11 +67,11 @@ func floatToInt() {
 	fmt.Printf("floatToInt\t%v\t%T\n", num, num)
 }
 
-func main() {
-	stringToInt()
-	intToString()
-	stringToFloat()
-	floatToString()
-	intToFloat()
-	floatToInt()
-}
+// func main() {
+// 	stringToInt()
+// 	intToString()
+// 	stringToFloat()
+// 	floatToString()
+// 	intToFloat()
+// 	floatToInt()
+// }

@@ -46,7 +46,7 @@ func testAPI(c *gin.Context) {
 	})
 }
 
-//arithmeticAction /v3/plus/arithmetic/?a=3&b=4
+//arithmeticAction /v3/arithmetic/plus/?a=3&b=4
 func arithmeticAction(c *gin.Context) {
 	version := c.Param("version")
 	action := c.Param("action")
@@ -126,7 +126,7 @@ func main() {
 	router.LoadHTMLFiles("templates/student.html")
 	router.GET("/tutorial/student/list", studentList)
 
-	// /user/sp100032/wallet/self/detail
+	// /user/sp100032/wallet/self/detail?intAuthToken=yuqbajnnr
 	router.POST("/user/:userId/wallet/self/detail", authToken)
 
 	router.Run(":8080")

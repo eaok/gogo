@@ -1,0 +1,8 @@
+go 1.18
+
+use (
+    ./application/serverExample
+    ./interview/apiInterview/beego-api
+    ./interview/apiInterview/gin-api
+    ./summary
+)

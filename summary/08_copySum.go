@@ -76,7 +76,7 @@ func deepCopyTest() {
 	deepCopySlice()
 }
 
-func main() {
-	shallowCopy()
-	deepCopyTest()
-}
+// func main() {
+// 	shallowCopy()
+// 	deepCopyTest()
+// }

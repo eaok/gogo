@@ -24,36 +24,34 @@ type JsonData struct {
 	Items []*Items `json:"items"`
 }
 
-func main() {
+var jsonStr = `{
+	"code": 0,
+	"message": "操作成功",
+	"data": {
+		"items": [{
+			"Id": 100,
+			"Title": "木华黎"
+		}, {
+			"Id": 200,
+			"Title": "耶律楚才"
+		}, {
+			"Id": 300,
+			"Title": "纳呀啊",
+			"Test": 100
+		}]
+	}
+}`
 
-	// json字符串数组,转换成切片
-	response := `{
-		"code": 0,
-		"message": "操作成功",
-		"data": {
-			"items": [{
-				"Id": 100,
-				"Title": "木华黎"
-			}, {
-				"Id": 200,
-				"Title": "耶律楚才"
-			}, {
-				"Id": 300,
-				"Title": "纳呀啊",
-				"Test": 100
-			}]
-		}
-	}`
-
+func jsonUnmalshal() {
 	res := Response{}
 	data := JsonData{}
 
-	err := json.Unmarshal([]byte(response), &res)
+	err := json.Unmarshal([]byte(jsonStr), &res)
 	if err != nil {
 		fmt.Println(err)
 	}
-	fmt.Println(response)
-	fmt.Println(res)
+	fmt.Println(jsonStr)
+	fmt.Printf("%#v\n", res)
 
 	err = json.Unmarshal(res.JsonData, &data)
 	if err != nil {
@@ -62,3 +60,40 @@ func main() {
 
 	fmt.Println(reflect.TypeOf(data.Items), data.Items, *data.Items[0])
 }
+
+func jsonMarshal() {
+	structJsonData := JsonData{
+		[]*Items{
+			{
+				ID:    100,
+				Title: "木华黎",
+			},
+			{
+				ID:    101,
+				Title: "木",
+			},
+		},
+	}
+
+	jsonRawData, err := json.Marshal(structJsonData)
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println(string(jsonRawData))
+
+	structResponseData := Response{
+		0,
+		"操作成功",
+		jsonRawData,
+	}
+	jsonRwaResponse, err := json.Marshal(structResponseData)
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println(string(jsonRwaResponse))
+}
+
+// func main() {
+// 	// jsonUnmalshal()
+// 	jsonMarshal()
+// }
